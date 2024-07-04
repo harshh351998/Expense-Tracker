@@ -1,0 +1,224 @@
+/* Default font size and general styles */
+html {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    position: relative;
+    min-height: 100%;
+}
+
+/* Adjust font size for larger screens */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #12161d;
+    color: #fff;
+    overflow-x: hidden; /* Ensure horizontal overflow is hidden */
+    font-family: "Inter", sans-serif;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 290px;
+    overflow-y: auto;
+    min-height: calc(100vh - 70px); /* Adjust height for smaller screens */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    nav.navbar {
+        margin-left: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+}
+
+/* Logo styles */
+.logo-wrapper {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-logo {
+    padding: 10px 10px;
+}
+
+/* Navbar styles */
+nav.navbar {
+    background-color: rgba(18, 22, 29);
+    margin-left: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+    nav.navbar i {
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+        nav.navbar i:hover {
+            background-color: #48545f14;
+            transform: scale(1.05) translateZ(0px);
+        }
+
+/* Profile picture styles */
+img.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(72, 84, 95, 0.12);
+    padding: 16px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+    .profile-wrapper .titles {
+        line-height: 1;
+    }
+
+/* Sidebar styles */
+#sidebar {
+    background-color: #12161d;
+    border-right: 1px dashed rgba(75, 82, 85, 0.24);
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+    #sidebar .e-menu-wrapper {
+        width: 100%;
+        background-color: inherit;
+    }
+
+#sidebar-toggler {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+    #sidebar-toggler:hover {
+        background-color: #48545f14;
+        transform: scale(1.05) translateZ(0px);
+    }
+
+/* Widget styles */
+.widget {
+    border-radius: 1rem;
+    background-color: #1a222b;
+}
+
+    .widget.summary > div:first-child {
+        background-color: #222b33;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+        .widget.summary > div:first-child i {
+            font-weight: bold;
+        }
+
+    .widget.income > div:first-child {
+        color: #65da41;
+    }
+
+    .widget.expense > div:first-child {
+        color: #ff4e48;
+    }
+
+    .widget.balance > div:first-child {
+        color: #2aa1ff;
+    }
+
+    .widget.chart {
+        padding: 5px;
+    }
+
+/* Additional Responsive Adjustments */
+@media (max-width: 767px) {
+    /* Adjustments for extra small screens */
+    .main-content {
+        margin-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav.navbar {
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo-wrapper {
+        height: 50px; /* Adjust logo height for smaller screens */
+    }
+
+    .app-logo {
+        padding: 8px 8px;
+    }
+
+    .profile-wrapper {
+        padding: 12px 16px;
+        margin-bottom: 20px;
+    }
+
+    
+
+        #sidebar.e-open {
+            margin-left: 0;
+        }
+
+    #sidebar-toggler {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+        #sidebar a {
+            float: left;
+        }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+        #sidebar a {
+            text-align: center;
+            float: none;
+        }
+    }
+}
